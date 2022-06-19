@@ -1,0 +1,31 @@
+// utilits
+@import "./utils/vars";
+@import "./utils/visually-hidden";
+
+// base styles
+@import "./base/common";
+@import "./base/container";
+@import "./base/reset";
+@import "./base/animations";
+
+@import "./base/card-set";
+@import "./base/js-selectors";
+
+// components
+
+@import "./components/logo";
+@import "./components/modal-form";
+@import "./components/socials";
+
+// @import "./components/button";
+
+// layouts
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/features";
+@import "./layouts/doing";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./layouts/footer";
+@import "./layouts/projects-filter";
+@import "./layouts/portfolio-projects";

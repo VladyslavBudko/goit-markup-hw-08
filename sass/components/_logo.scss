@@ -1,0 +1,21 @@
+/* Logo */
+
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway, cursive;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  text-decoration: none;
+
+  margin-right: 90px;
+  padding: 20px 0;
+
+  &:focus .header__logo,
+  &:hover .header__logo,
+  &:hover .footer__logo,
+  &:focus .footer__logo {
+    color: var(--accent-color);
+  }
+}

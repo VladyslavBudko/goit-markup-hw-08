@@ -1,0 +1,53 @@
+/* Чем мы занимаемся */
+
+.section.doing {
+  padding-top: 0;
+}
+
+.doing {
+  &__list {
+    display: flex;
+  }
+
+  &__bgtext {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--primary-color);
+  }
+}
+
+.doing__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 70px;
+    background-color: var(--doing-bgc);
+  }
+}

@@ -1,0 +1,37 @@
+/* Social icon */
+
+.socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0px;
+  border: none;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--primary-color);
+
+  fill: var(--icon-main-color);
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    fill: var(--primary-color);
+    cursor: pointer;
+  }
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}

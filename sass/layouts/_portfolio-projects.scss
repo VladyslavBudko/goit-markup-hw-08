@@ -1,0 +1,102 @@
+/* ---------------------------------------------
+ portfolio projects 
+ ---------------------------------------------*/
+
+.projects {
+  & h2 {
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: var(--primary-text-color);
+  }
+
+  &__description {
+    color: var(--text-description-color);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+  }
+
+  &.section {
+    padding-top: 94px;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+  }
+
+  &__item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
+
+  &__card:hover,
+  &__card:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 20px 24px;
+    border: 1px solid var(--projects-border-color);
+    border-top: 0;
+  }
+
+  &__card {
+    display: block;
+    border-radius: 4px;
+
+    transition: box-shadow var(--animation);
+  }
+}
+
+.overlay-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-description {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+  padding: 64px 24px;
+
+  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform var(--animation), opacity var(--animation);
+
+  .projects__card:hover &,
+  .projects__card:focus & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,21 @@
+.button {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+  text-decoration: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  display: block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  min-height: 50px;
+  border: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+}

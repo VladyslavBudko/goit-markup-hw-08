@@ -1,0 +1,17 @@
+img {
+  display: block;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
