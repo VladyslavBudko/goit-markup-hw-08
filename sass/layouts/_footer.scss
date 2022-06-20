@@ -9,16 +9,47 @@ footer
 
 .footer__list {
   display: flex;
-  align-items: baseline;
+
+  @include mq(not-desktop) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+  }
 }
 
 .footer__item {
-  &:nth-child(1) {
-    margin-right: 70px;
+  @include mq(not-desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
   }
 
-  &:nth-child(2) {
-    margin-right: auto;
+  @include mq(desktop) {
+    &:nth-child(1) {
+      margin-right: 70px;
+    }
+
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+}
+
+.address__list {
+  @include mq(not-desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -82,6 +113,12 @@ footer
   color: var(--primary-color);
 
   margin-bottom: 20px;
+
+  // @include mq(not-desktop) {
+  //   display: block;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
 }
 
 .footer__socials-link {
@@ -97,14 +134,32 @@ footer
 }
 
 /* Footer E-mail form */
+.footer__form {
+  @include mq(not-desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .footer__mail-block {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mq(not-desktop) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .footer__group {
   margin-right: 12px;
+
+  @include mq(not-desktop) {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__input {
