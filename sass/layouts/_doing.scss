@@ -2,6 +2,10 @@
 
 .section.doing {
   padding-top: 0;
+
+  @include mq(not-desktop) {
+    display: none;
+  }
 }
 
 .doing {

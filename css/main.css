@@ -822,6 +822,12 @@ a {
   padding-top: 0;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .section.doing {
+    display: none;
+  }
+}
+
 .doing__list {
   display: -webkit-box;
   display: -ms-flexbox;
