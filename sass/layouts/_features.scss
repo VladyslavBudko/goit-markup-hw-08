@@ -17,9 +17,12 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    text-transform: uppercase;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @include mq(mobile-only) {
+      text-align: center;
+    }
   }
 
   &-description {
@@ -35,10 +38,22 @@
     }
   }
 
+  &-item {
+    @include mq(not-desktop) {
+      margin-bottom: 30px;
+    }
+  }
+
   &-item:not(:last-child) {
     @include mq(desktop) {
       margin-right: 30px;
     }
+  }
+}
+
+.features__for-tablet {
+  @include mq(tablet-only) {
+    display: flex;
   }
 }
 
@@ -51,18 +66,17 @@
   margin-bottom: 30px;
   border-radius: 4px;
 
+  height: 120px;
+
   @include mq(mobile) {
     width: 450px;
-    height: 120px;
   }
 
   @include mq(tablet) {
     width: 354px;
-    height: 120px;
   }
 
   @include mq(desktop) {
     width: 270px;
-    height: 120px;
   }
 }
