@@ -11,6 +11,24 @@
 }
 
 .features__section {
+  &-item {
+    @include mq(not-desktop) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(mobile) {
+      width: 450px;
+    }
+
+    @include mq(tablet) {
+      width: 354px;
+    }
+
+    @include mq(desktop) {
+      width: 270px;
+    }
+  }
+
   &-title {
     color: var(--primary-text-color);
 
@@ -38,22 +56,10 @@
     }
   }
 
-  &-item {
-    @include mq(not-desktop) {
-      margin-bottom: 30px;
-    }
-  }
-
   &-item:not(:last-child) {
     @include mq(desktop) {
       margin-right: 30px;
     }
-  }
-}
-
-.features__for-tablet {
-  @include mq(tablet-only) {
-    display: flex;
   }
 }
 
