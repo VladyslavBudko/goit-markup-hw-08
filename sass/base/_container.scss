@@ -1,10 +1,21 @@
 /* разделение по блокам */
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
 
   margin-left: auto;
   margin-right: auto;
+
+  @include mq(mobile) {
+    width: 450px;
+  }
+
+  @include mq(tablet) {
+    width: 738px;
+  }
+
+  @include mq(desktop) {
+    width: 1170px;
+  }
 }
