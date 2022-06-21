@@ -25,7 +25,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 450px;
+  width: 100%;
+
+  @include mq(mobile) {
+    width: 450px;
+  }
 
   @include mq(desktop) {
     width: 528px;
@@ -219,7 +223,7 @@
   &__desc {
     display: flex;
     align-items: center;
-    // margin-right: 8px;
+    
 
     font-size: 12px;
     line-height: 1.16;
@@ -229,6 +233,7 @@
     @include mq(desktop) {
       font-size: 14px;
       line-height: 1.71px;
+      // margin-right: 8px;
     }
   }
 
