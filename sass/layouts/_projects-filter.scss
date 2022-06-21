@@ -6,10 +6,20 @@
   justify-content: center;
 
   margin-bottom: 50px;
+
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -8px;
+  margin-top: -15px;
+
+  @include mq(tablet) {
+    flex-wrap: nowrap;
+  }
 }
 
-.filter .section-item:not(:last-child) {
-  margin-right: 8px;
+.filter .section-item {
+  margin-left: 8px;
+  margin-top: 15px;
 }
 
 .button-filter {
