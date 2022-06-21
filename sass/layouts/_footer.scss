@@ -155,12 +155,8 @@ footer
 }
 
 .footer__group {
-  margin-right: 12px;
-
-  @include mq(mobile) {
-    max-width: 450px;
-    width: 100%;
-  }
+  max-width: 450px;
+  width: 100%;
 
   @include mq(not-desktop) {
     margin-bottom: 20px;
@@ -168,11 +164,15 @@ footer
 
   @include mq(desktop) {
     width: 358px;
+    margin-right: 12px;
   }
 }
 
 .footer__input {
   width: 100%;
+  width: 450px;
+  height: 50px;
+
   padding: 15px 0 15px 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -182,12 +182,6 @@ footer
   color: var(--primary-background);
 
   outline: transparent;
-
-  height: 50px;
-
-  @include mq(mobile) {
-    width: 450px;
-  }
 
   @include mq(desktop) {
     width: 358px;
