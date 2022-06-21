@@ -1,5 +1,7 @@
 // Mobile-menu
 .mobile-menu {
+    display: none;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -16,6 +18,10 @@
 
   @include mq(tablet) {
     display: none;
+  }
+
+  &.is-open {
+    display: block;
   }
 }
 
