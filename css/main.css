@@ -807,9 +807,9 @@ a {
 /* hero */
 .hero {
   background-color: var(--hero-background);
-  height: 600px;
-  padding: 200px 0;
-  width: 1600px;
+  height: 400px;
+  width: 100%;
+  padding: 118px 0;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
@@ -819,21 +819,54 @@ a {
   background-position: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    max-width: 1600px;
+    padding: 200px 0;
+  }
+}
+
 .hero__container {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .hero__container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    width: 1200px;
+  }
 }
 
 .hero__title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
   color: var(--primary-color);
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__button {

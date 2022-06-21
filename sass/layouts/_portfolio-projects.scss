@@ -67,7 +67,6 @@
 
     flex-basis: 100%;
 
-
     @include mq(mobile) {
       flex-basis: calc(100% - 30px);
     }

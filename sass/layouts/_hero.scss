@@ -2,10 +2,10 @@
 
 .hero {
   background-color: var(--hero-background);
-  height: 600px;
-  padding: 200px 0;
+  height: 400px;
+  width: 100%;
+  padding: 118px 0;
 
-  width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
@@ -18,22 +18,50 @@
   background-repeat: no-repeat;
   background-position: center;
 
+
+  @include mq(desktop) {
+    height: 600px;
+    max-width: 1600px;
+    padding: 200px 0;
+  }
+
   &__container {
-    width: 1200px;
     margin-left: auto;
     margin-right: auto;
+
+    width: 100%;
+
+    @include mq(mobile) {
+      width: 480px;
+    }
+  
+    @include mq(tablet) {
+      width: 768px;
+    }
+  
+    @include mq(desktop) {
+      // max-width: 1600px;
+      width: 1200px;
+    }
+
   }
 
   &__title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.06em;
 
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+
     color: var(--primary-color);
     margin-bottom: 30px;
+
+    @include mq(desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
 
