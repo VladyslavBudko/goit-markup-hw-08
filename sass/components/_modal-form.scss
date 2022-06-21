@@ -25,7 +25,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 528px;
+  width: 450px;
+
+  @include mq(desktop) {
+    width: 528px;
+  }
 
   background-color: var(--primary-color);
 
@@ -210,13 +214,17 @@
   &__desc {
     display: flex;
     align-items: center;
-    margin-right: 8px;
+    // margin-right: 8px;
 
-    font-size: 14px;
-    line-height: 1.71px;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
-
     color: var(--text-description-color);
+
+    @include mq(desktop) {
+      font-size: 14px;
+      line-height: 1.71px;
+    }
   }
 
   &__a {
@@ -229,8 +237,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
   margin-right: 8px;
+
+  @include mq(desktop) {
+  margin-left: 10px;
+}
 
   width: 16px;
   height: 15px;
@@ -249,7 +260,10 @@
     top: 0;
     left: 0;
 
+
+  @include mq(desktop) {
     margin-left: 10px;
+  }
     border-radius: 2px;
 
     opacity: 0;

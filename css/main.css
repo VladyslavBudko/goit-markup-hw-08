@@ -234,7 +234,7 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
+  width: 450px;
   background-color: var(--primary-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -245,6 +245,12 @@ a {
   transition: transform var(--animation), opacity var(--animation) 200ms, -webkit-transform var(--animation);
   /* Начало открытия окна */
   /* Окончание открытия */
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__wrapper {
+    width: 528px;
+  }
 }
 
 .backdrop.is-hidden .modal__wrapper {
@@ -421,11 +427,17 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 8px;
-  font-size: 14px;
-  line-height: 1.71px;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--text-description-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .form-policy__desc {
+    font-size: 14px;
+    line-height: 1.71px;
+  }
 }
 
 .form-policy__a {
@@ -443,7 +455,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 10px;
   margin-right: 8px;
   width: 16px;
   height: 15px;
@@ -451,6 +462,12 @@ a {
   border-radius: 2px;
   -webkit-transition: border var(--animation);
   transition: border var(--animation);
+}
+
+@media screen and (min-width: 1200px) {
+  .form-policy__custom-checkbox {
+    margin-left: 10px;
+  }
 }
 
 .form-policy__checkbox:focus + .form-policy__custom-checkbox,
@@ -462,11 +479,16 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: 10px;
   border-radius: 2px;
   opacity: 0;
   -webkit-transition: opacity var(--animation);
   transition: opacity var(--animation);
+}
+
+@media screen and (min-width: 1200px) {
+  .form-policy__custom-checkbox--mark {
+    margin-left: 10px;
+  }
 }
 
 .form-policy__checkbox:checked ~ .form-policy__custom-checkbox .form-policy__custom-checkbox--mark {
