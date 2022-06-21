@@ -26,6 +26,15 @@
     display: block;
     max-width: 100%;
     height: auto;
+
+    @include mq(mobile-only) {
+      width: 450px;
+    }
+
+    @include mq(tablet-only) {
+      width: 354px;
+    }
+
   }
 
   &__list {
