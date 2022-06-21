@@ -670,6 +670,7 @@ a {
   .header__icon.mail {
     width: 14px;
     height: 10px;
+    margin-right: 8px;
   }
 }
 
@@ -677,6 +678,7 @@ a {
   .header__icon.phone {
     width: 10px;
     height: 14px;
+    margin-right: 8px;
   }
 }
 
