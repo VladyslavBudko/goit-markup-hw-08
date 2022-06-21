@@ -18,6 +18,8 @@
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
 
+  flex-basis: calc(100% - var(--card-set-gap));
+
   @include mq(mobile-only) {
     flex-basis: calc(100% / 2- var(--card-set-gap));
   }
@@ -36,8 +38,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 170px;
-  height: 92px;
+
 
   border: 1px solid var(--icon-main-color);
   border-radius: 4px;
@@ -48,6 +49,21 @@
   &:focus {
     border-color: var(--accent-color);
   }
+
+  height: 92px;
+  width: 100%; 
+
+  @include mq(mobile) {
+    width: 210px;
+  }
+
+  @include mq(tablet) {
+    width: 226px;
+  }
+
+  @include mq(desktop) {
+    width: 170px; 
+}
 }
 
 .clients__icon {
