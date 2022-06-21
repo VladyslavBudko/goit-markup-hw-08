@@ -42,6 +42,10 @@ footer
       margin-right: auto;
     }
   }
+
+  &.footer__mail {
+    width: 100%;
+  }
 }
 
 .address__list {
@@ -134,7 +138,10 @@ footer
 }
 
 /* Footer E-mail form */
+
 .footer__form {
+  width: 100%;
+
   @include mq(not-desktop) {
     display: flex;
     flex-direction: column;
@@ -148,10 +155,16 @@ footer
   justify-content: center;
   align-items: center;
 
+  width: 100%;
+
   @include mq(not-desktop) {
     display: flex;
     flex-direction: column;
   }
+}
+
+.footer__label {
+  width: 100%;
 }
 
 .footer__group {
@@ -170,7 +183,8 @@ footer
 
 .footer__input {
   width: 100%;
-  width: 450px;
+  max-width: 450px;
+
   height: 50px;
 
   padding: 15px 0 15px 16px;
@@ -182,6 +196,10 @@ footer
   color: var(--primary-background);
 
   outline: transparent;
+
+  @include mq(mobile) {
+    width: 450px;
+  }
 
   @include mq(desktop) {
     width: 358px;
