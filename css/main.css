@@ -666,6 +666,20 @@ a {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__icon.mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__icon.phone {
+    width: 10px;
+    height: 14px;
+  }
+}
+
 .header__mail-phone {
   margin-left: auto;
   display: -webkit-box;
@@ -679,6 +693,22 @@ a {
 @media screen and (max-width: 767.98px) {
   .header__mail-phone {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__mail-phone {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__mail-phone .header__item {
+    margin: 0;
+    margin-right: auto;
   }
 }
 
@@ -764,6 +794,12 @@ a {
 
 .header__contact:hover, .header__contact:focus {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__contact {
+    padding: 10px 0;
+  }
 }
 
 /* hero */

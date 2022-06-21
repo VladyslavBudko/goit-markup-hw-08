@@ -1,6 +1,6 @@
 /* Header */
 .header {
-position: relative;
+  position: relative;
 
   border-bottom: 1px solid var(--header-line-bottom);
 
@@ -37,6 +37,20 @@ position: relative;
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+
+    &.mail {
+      @include mq(tablet-only) {
+        width: 14px;
+        height: 10px;
+      }
+    }
+
+    &.phone {
+      @include mq(tablet-only) {
+        width: 10px;
+        height: 14px;
+      }
+    }
   }
 
   &__mail-phone {
@@ -47,6 +61,17 @@ position: relative;
 
     @include mq(mobile-only) {
       display: none;
+    }
+
+    @include mq(tablet-only) {
+      flex-direction: column;
+    }
+
+    & .header__item {
+      @include mq(tablet-only) {
+        margin: 0;
+        margin-right: auto;
+      }
     }
   }
 }
@@ -61,7 +86,7 @@ position: relative;
   background-color: transparent;
 
   & .icon-cross {
-display: none;
+    display: none;
   }
 
   &.is_open .icon-cross {
@@ -72,8 +97,6 @@ display: none;
     display: none;
   }
 }
-
-
 
 .header__link {
   display: block;
@@ -88,8 +111,6 @@ display: none;
   text-decoration: none;
 
   transition: color var(--animation);
-
-
 
   &.current::after {
     content: "";
@@ -139,5 +160,9 @@ display: none;
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @include mq(tablet-only) {
+    padding: 10px 0;
   }
 }
