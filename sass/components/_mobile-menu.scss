@@ -1,28 +1,73 @@
 // Mobile-menu
-.mobile-menu {
-    display: none;
+.header__navigation {
+  @include mq(not-desktop) {
+    width: 100%;
+    position: relative;
+  }
+}
 
+.menu-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 48px 83px 48px 40px;
   background-color: #fff;
 
   display: flex;
   flex-direction: column;
+  z-index: 100;
 
-  z-index: -1; 
-//   z-index еще не готов, временно сделал -1
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
 
   @include mq(tablet) {
     display: none;
   }
 
   &.is-open {
-    display: block;
+    transform: translateX(0);
   }
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  @include mq(tablet) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+}
+
+.header__container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -36,9 +81,9 @@
   letter-spacing: 0.02em;
   color: #212121;
 
-  &.current {
-    color: var(--accent-color);
-  }
+  // &.current {
+  //   color: var(--accent-color);
+  // }
 }
 
 .mobile-menu__contacts {
@@ -63,13 +108,12 @@
 }
 
 .mobile-menu__socials {
-display: flex;
-
+  display: flex;
 }
 
 .mobile-menu__socials-item:not(:last-child) {
-    margin-right: 20px;
-  }
+  margin-right: 20px;
+}
 
 .mobile-menu__socials-link {
   font-weight: 500;
@@ -81,9 +125,9 @@ display: flex;
   &::after :not(:last-child) {
     content: "";
     width: 22px;
-height: 0px;
+    height: 0px;
 
-border: 1px solid rgba(33, 33, 33, 0.2);
-transform: rotate(90deg);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
   }
 }

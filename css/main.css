@@ -552,13 +552,19 @@ a {
   margin-right: 10px;
 }
 
-.mobile-menu {
-  display: none;
+@media screen and (max-width: 1199.98px) {
+  .header__navigation {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.menu-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 48px 83px 48px 40px;
   background-color: #fff;
   display: -webkit-box;
@@ -568,17 +574,69 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: -1;
+  z-index: 100;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
-  .mobile-menu {
+  .menu-container {
     display: none;
   }
 }
 
-.mobile-menu.is-open {
-  display: block;
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover, .menu-toggle:focus {
+  fill: var(--accent-color);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+}
+
+.header__container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -591,10 +649,6 @@ a {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: #212121;
-}
-
-.mobile-menu__nav-link.current {
-  color: var(--accent-color);
 }
 
 .mobile-menu__contacts {
