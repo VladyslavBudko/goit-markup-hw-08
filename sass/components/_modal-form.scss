@@ -21,19 +21,22 @@
 
 .modal__wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 35vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
 
   width: 100%;
 
   @include mq(mobile) {
+    top: 40vh;
     width: 450px;
   }
 
   @include mq(desktop) {
+    top: 50vh;
     width: 528px;
   }
+
 
   background-color: var(--primary-color);
 
@@ -215,25 +218,27 @@
 /* Custom Checkbox */
 
 .form-policy {
+  position: relative;
+
   display: flex;
   align-items: center;
-  position: relative;
   margin-bottom: 30px;
 
   &__desc {
-    display: flex;
-    align-items: center;
-    
+    display: inline-block;
 
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.03em;
     color: var(--text-description-color);
 
+    @include mq(mobile) {
+      white-space: nowrap;
+    }
+
     @include mq(desktop) {
       font-size: 14px;
       line-height: 1.71px;
-      // margin-right: 8px;
     }
   }
 
@@ -244,10 +249,13 @@
 }
 
 .form-policy__custom-checkbox {
+  // position: relative;
+  // display: block;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
   margin-right: 8px;
+  // flex-basis: 24px;
 
   @include mq(desktop) {
     margin-left: 10px;
