@@ -9,15 +9,110 @@
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../images/hero-bg-img.jpg");
+
+  // background-image:url("../images/hero-bg-img.jpg"), linear-gradient(
+  //     to right,
+  //     rgba(47, 48, 58, 0.4),
+  //     rgba(47, 48, 58, 0.4));
+
+  /**
+  |============================
+  | Завантаження звичайного фонового зображення для мобільної версії
+  |============================
+*/
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
+  background-image: url("../../images/header_mob.webp"),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header_mob.webp") 1x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header@2x_mob.webp") 2x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header@3x_mob.webp") 3x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+
+  // Завантаження ретінізованого 2х фонового зображення
+  @include mq(retina) {
+    background-image: url("../../images/header_mob.webp"),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(url("../../images/header_mob.webp") 1x),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(
+        url("../../images/header@2x_mob.webp") 2x
+      ),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(
+        url("../../images/header@3x_mob.webp") 3x
+      ),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  }
+
+  /**
+  |============================
+  | Завантаження звичайного фонового зображення для планшету
+  |============================
+*/
+  @include mq(tablet) {
+    background-image: url("../../images/header_tab.webp"),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header_tab.webp") 1x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header@2x_tab.webp") 2x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header@3x_tab.webp") 3x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+
+  // Завантаження ретінізованого 2х фонового зображення
+  @include mq(retina) {
+    background-image: url("../../images/header_tab.webp"),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(url("../../images/header_tab.webp") 1x),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(
+        url("../../images/header@2x_tab.webp") 2x
+      ),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(
+        url("../../images/header@3x_tab.webp") 3x
+      ),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  }
+  }
+
+  /**
+  |============================
+  | Завантаження звичайного фонового зображення для десктопної версії
+  |============================
+*/
+
+  @include mq(desktop) {
+    background-image: url("../../images/header_desk.webp"),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header_desk.webp") 1x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header@2x_desk.webp") 2x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: -webkit-image-set(url("../../images/header@3x_desk.webp") 3x),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+
+  // Завантаження ретінізованого 2х фонового зображення
+  @include mq(retina) {
+    background-image: url("../../images/header_desk.webp"),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(url("../../images/header_desk.webp") 1x),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(
+        url("../../images/header@2x_desk.webp") 2x
+      ),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: -webkit-image-set(
+        url("../../images/header@3x_desk.webp") 3x
+      ),
+      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  }
+  }
 
   @include mq(desktop) {
     height: 600px;
@@ -34,16 +129,15 @@
     @include mq(mobile) {
       width: 480px;
     }
-  
+
     @include mq(tablet) {
       width: 768px;
     }
-  
+
     @include mq(desktop) {
       // max-width: 1600px;
       width: 1200px;
     }
-
   }
 
   &__title {
