@@ -37,7 +37,6 @@
     width: 528px;
   }
 
-
   background-color: var(--primary-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -226,6 +225,7 @@
 
   &__desc {
     display: inline-block;
+    max-width: 340px;
 
     font-size: 12px;
     line-height: 1.16;
@@ -234,6 +234,8 @@
 
     @include mq(mobile) {
       white-space: nowrap;
+      max-width: none;
+
     }
 
     @include mq(desktop) {
@@ -249,13 +251,11 @@
 }
 
 .form-policy__custom-checkbox {
-  // position: relative;
-  // display: block;
   display: flex;
-  // align-items: center;
-  // justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-right: 8px;
-  // flex-basis: 24px;
+  flex-basis: 16px;
 
   @include mq(desktop) {
     margin-left: 10px;
@@ -285,6 +285,12 @@
 
     opacity: 0;
     transition: opacity var(--animation);
+
+    transform: translate(0, 40%);
+
+    @include mq(mobile) {
+      transform: translate(0, 0%);
+    }
   }
 
   .form-policy__checkbox:checked ~ & &--mark {
